@@ -9,11 +9,12 @@ import {
   Link,
 } from "@chakra-ui/react";
 import React from "react";
-import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react";
+import { Avatar, AvatarGroup } from "@chakra-ui/react";
 
 export default function TopContainer() {
   return (
     <Box
+      as="section"
       backgroundImage={"/images/background.webp"}
       backgroundSize="contain"
       py="20"

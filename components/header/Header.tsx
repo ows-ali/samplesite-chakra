@@ -4,26 +4,18 @@ import {
   Box,
   Button,
   Flex,
-  Heading,
   HStack,
   Image,
   Link,
   List,
   ListItem,
 } from "@chakra-ui/react";
-import {
-  PhoneIcon,
-  AddIcon,
-  WarningIcon,
-  SearchIcon,
-  DeleteIcon,
-  MoonIcon,
-} from "@chakra-ui/icons";
+import { SearchIcon, MoonIcon } from "@chakra-ui/icons";
 import React from "react";
 
 export default function Header() {
   return (
-    <Box pt={5}>
+    <Box pt={5} as="header">
       {/* left area */}
       <Flex justifyContent={"space-around"} alignItems={"center"}>
         <Box>
