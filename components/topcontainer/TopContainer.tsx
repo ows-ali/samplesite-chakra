@@ -7,6 +7,7 @@ import {
   Image,
   Text,
   Link,
+  Hide,
 } from "@chakra-ui/react";
 import React from "react";
 import { Avatar, AvatarGroup } from "@chakra-ui/react";
@@ -23,7 +24,11 @@ export default function TopContainer() {
     >
       <HStack>
         {/* left */}
-        <Box w="50%" color={"white"} pl="44">
+        <Box
+          w={{ base: "100%", lg: "50%" }}
+          color={"white"}
+          pl={{ base: "10", lg: "44" }}
+        >
           <Heading fontSize={60}>Build your next idea even faster</Heading>
           <Text lineHeight={"8"}>
             One Year Panaverse DAO Earn as you Learn Program. Consolidating Web
@@ -82,9 +87,11 @@ export default function TopContainer() {
           </Flex>
         </Box>
         {/* right */}
-        <Box w="50%">
-          <Image src="/images/banner.png" />
-        </Box>
+        <Hide below="lg">
+          <Box w="50%">
+            <Image src="/images/banner.png" />
+          </Box>
+        </Hide>
       </HStack>
     </Box>
   );

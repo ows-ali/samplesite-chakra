@@ -4,15 +4,23 @@ import {
   Container,
   Heading,
   HStack,
+  Stack,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import React from "react";
 
 export default function CTA() {
+  const { colorMode } = useColorMode();
+
   return (
     <Box>
-      <Container maxW={1200} bg={"blue.50"} p="10">
-        <HStack>
+      <Container
+        maxW={1200}
+        bg={colorMode == "light" ? "blue.50" : "black"}
+        p="10"
+      >
+        <Stack direction={{ base: "column", md: "row" }}>
           <Box flex={3}>
             <Heading>Try our free components</Heading>
             <Text fontSize={"20px"}>
@@ -26,7 +34,7 @@ export default function CTA() {
               View Components
             </Button>
           </Box>
-        </HStack>
+        </Stack>
       </Container>
     </Box>
   );

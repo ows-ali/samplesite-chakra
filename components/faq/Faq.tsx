@@ -20,7 +20,7 @@ export default function Faq() {
   return (
     <Box>
       <Container maxW={1200} my="16">
-        <Flex>
+        <Flex flexDirection={{ base: "column", md: "row" }}>
           {/* left section */}
           <Box flex={2}>
             <Box textAlign={"left"}>

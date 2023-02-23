@@ -30,7 +30,7 @@ export default function Feature() {
       <Container maxW={1200} mt="10">
         {/* 6 features  */}
         <Box>
-          <SimpleGrid columns={2} spacing={10}>
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
             {/* feature 1 */}
             <Box>
               <HStack>

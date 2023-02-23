@@ -5,6 +5,7 @@ import {
   Container,
   Flex,
   Heading,
+  SimpleGrid,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
@@ -29,7 +30,7 @@ export default function Highlights() {
         </Text>
       </Box>
       <Container maxW={1200}>
-        <Flex gap={5}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={5}>
           <Card align="center">
             <CardHeader>
               <Center color="blue.500">
@@ -107,7 +108,7 @@ export default function Highlights() {
               <Button colorScheme="blue">View here</Button>
             </CardFooter>
           </Card>
-        </Flex>
+        </SimpleGrid>
       </Container>
     </Box>
   );
