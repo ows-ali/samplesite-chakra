@@ -15,9 +15,14 @@ import React from "react";
 
 export default function Header() {
   return (
-    <Box pt={5} as="header">
+    <Box as="header" position={"sticky"} top="0" zIndex={1}>
       {/* left area */}
-      <Flex justifyContent={"space-around"} alignItems={"center"}>
+      <Flex
+        justifyContent={"space-around"}
+        alignItems={"center"}
+        bg="white"
+        py="5"
+      >
         <Box>
           <HStack>
             <Image
